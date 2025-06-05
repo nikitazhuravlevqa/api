@@ -1,0 +1,1644 @@
+{
+	"id": "d0a3e2ab-2e01-4205-b516-8509fce96f9e",
+	"name": "DemoShopping",
+	"timestamp": "2025-06-05T14:54:57.757Z",
+	"collection_id": "31214816-036db6c5-dfb6-4424-a703-ef5f34151b18",
+	"folder_id": 0,
+	"environment_id": "31214816-884d34c5-5eb0-4fc3-8063-81a0d0d833b4",
+	"totalPass": 32,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-05T14:54:49.621Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "91e5116b-70ac-4b69-a07d-88f6a9a53de1",
+			"name": "200: Возвращает список всех продуктов",
+			"url": "https://qa.demoshopping.ru/products",
+			"time": 173,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус ответа 200": true,
+				"Ответ содержит массив продуктов": true,
+				"У всех продуктов есть обязательные поля": true,
+				"Поля имеют правильные типы данных": true,
+				"Все product_id уникальны": true,
+				"Названия и описания не пустые": true
+			},
+			"testPassFailCounts": {
+				"Статус ответа 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит массив продуктов": {
+					"pass": 1,
+					"fail": 0
+				},
+				"У всех продуктов есть обязательные поля": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поля имеют правильные типы данных": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Все product_id уникальны": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Названия и описания не пустые": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				173
+			],
+			"allTests": [
+				{
+					"Статус ответа 200": true,
+					"Ответ содержит массив продуктов": true,
+					"У всех продуктов есть обязательные поля": true,
+					"Поля имеют правильные типы данных": true,
+					"Все product_id уникальны": true,
+					"Названия и описания не пустые": true
+				}
+			]
+		},
+		{
+			"id": "0d717f80-073a-4ee1-8627-91e66385a421",
+			"name": "200: Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Ответ содержит фразу об успешном добавлении": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит фразу об успешном добавлении": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Ответ содержит фразу об успешном добавлении": true
+				}
+			]
+		},
+		{
+			"id": "5a111bd2-8859-4ba2-8e65-dae742fabcb8",
+			"name": "200: Полное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 55,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус ответа 200 (OK)": true,
+				"Ответ содержит сообщение 'Товар обновлён'": true
+			},
+			"testPassFailCounts": {
+				"Статус ответа 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит сообщение 'Товар обновлён'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Статус ответа 200 (OK)": true,
+					"Ответ содержит сообщение 'Товар обновлён'": true
+				}
+			]
+		},
+		{
+			"id": "4819fa6d-a78b-412a-9955-dcd23e390566",
+			"name": "400: Полное обновление товара без информации о доставке",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 31,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "79237623-0702-4e20-bd17-b46a4b11bacb",
+			"name": "200: Частичное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Ответ содержит сообщение 'Товар частично обновлён'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит сообщение 'Товар частично обновлён'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Ответ содержит сообщение 'Товар частично обновлён'": true
+				}
+			]
+		},
+		{
+			"id": "c9afc07a-b557-43e7-a802-d35f24121e70",
+			"name": "500: Частичное обновление товара без тела запроса",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 42,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 500": true,
+				"Ответ содержит сообщение об ошибке сервера": true
+			},
+			"testPassFailCounts": {
+				"Status code is 500": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит сообщение об ошибке сервера": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 500": true,
+					"Ответ содержит сообщение об ошибке сервера": true
+				}
+			]
+		},
+		{
+			"id": "1b5bb01c-834f-4100-acb8-ca76d92799a8",
+			"name": "400: Добавление нового продукта без имени",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 30,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "df8c878b-4ac5-476b-b748-95df6ae58d93",
+			"name": "200: Поиск товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 43,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "beb48aff-018b-4b36-b78e-554539dad51d",
+			"name": "200: Удаление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e54eb707-1156-419d-b7ae-9a1969bfbd87",
+			"name": "404: Полное обновление товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 32,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				32
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "489e6843-1156-4d84-bea1-4b321d2f6f17",
+			"name": "404: Удаление товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 30,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "ccded6cf-86b7-4081-b5c8-9dbe10860aa1",
+			"name": "403: Удаление товара запрещено",
+			"url": "https://qa.demoshopping.ru/products/id/1",
+			"time": 30,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Status code is 403": true
+				}
+			]
+		},
+		{
+			"id": "11b21427-f26d-42a5-b368-9da0d76924de",
+			"name": "404: Поиск товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 36,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				36
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "6dd72601-fbc6-4cf5-a36b-49d295a06f62",
+			"name": "400: Частичное обновление товара по ID без тела запроса",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 33,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				33
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "0484bd36-000d-4d4b-b81b-e9aa4b542ff0",
+			"name": "404: Частичное обновление товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/21247",
+			"time": 33,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				33
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "1c8da26c-d106-4271-8a64-11b3af7029bf",
+			"name": "200: Поиск товаров по категории",
+			"url": "https://qa.demoshopping.ru/products/FindByCategory?category=Phones",
+			"time": 53,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "1451aac2-fc59-4576-89a4-f91f20aa0a43",
+			"name": "404: Поиск товаров по несуществующей категории",
+			"url": "https://qa.demoshopping.ru/products/FindByCategory?category=Phonec",
+			"time": 39,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "093de585-1fd7-4d28-b6ed-549fcb30f190",
+			"name": "200: Поиск товаров по производителю",
+			"url": "https://qa.demoshopping.ru/products/FindByManufacturer?manufacturer=Apple",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "61163ce5-2deb-4086-9dc4-1409a71f2d89",
+			"name": "404: Поиск товаров по несуществующему производителю",
+			"url": "https://qa.demoshopping.ru/products/FindByManufacturer?manufacturer=Aple",
+			"time": 47,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "fdfa8b89-963f-4afc-91e8-69a143df0048",
+			"name": "200: Поиск товаров с бесплатной доставкой",
+			"url": "https://qa.demoshopping.ru/products/FindByShipping?freeShipping=true",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6f4b7af5-1883-41cd-8f3d-f263a720aa79",
+			"name": "200: Фильтрация списка продуктов",
+			"url": "https://qa.demoshopping.ru/products/filter?minPrice=99&maxPrice=100",
+			"time": 33,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				33
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4c767042-c022-4839-b30e-0bad2a23a077",
+			"name": "200: Авторизация пользователя",
+			"url": "https://qa.demoshopping.ru/login",
+			"time": 57,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				57
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "09ce1329-0575-444a-bf68-39bea7ec3be6",
+			"name": "400: Авторизация пользователя с несуществующими данными",
+			"url": "https://qa.demoshopping.ru/login",
+			"time": 32,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				32
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f9d306fe-913d-495a-b4cb-ab5cf917caf2",
+			"name": "200: Регистрация нового пользователя",
+			"url": "https://qa.demoshopping.ru/register",
+			"time": 51,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				51
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0be7db16-dd4f-4d22-9377-d28b5e214d4c",
+			"name": "400: Регистрация нового пользователя с невалидным логином",
+			"url": "https://qa.demoshopping.ru/register",
+			"time": 32,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				32
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9e5234a9-414d-49cc-8b39-ac80cb5ac999",
+			"name": "400: Регистрация существующего пользователя",
+			"url": "https://qa.demoshopping.ru/register",
+			"time": 37,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				37
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c1b12336-0233-4156-b95a-37b832b1b555",
+			"name": "200: Добавление нового пользователя",
+			"url": "https://qa.demoshopping.ru/users",
+			"time": 43,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				43
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7b14f10b-fa41-4aa1-a446-1ae0d0db70a2",
+			"name": "400: Добавление нового пользователя с невалидным паролем",
+			"url": "https://qa.demoshopping.ru/users",
+			"time": 33,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				33
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "99ec5a3d-6a13-4d82-80c8-4234a5e5d31e",
+			"name": "200: Получение всех user_id и login пользователей",
+			"url": "https://qa.demoshopping.ru/users",
+			"time": 100,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				100
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e0ed821a-a68f-4f97-bea9-1649b592adeb",
+			"name": "200: Удаление пользователя по ID",
+			"url": "https://qa.demoshopping.ru/users/2845",
+			"time": 52,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				52
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7c22a7e8-1bca-478b-8b30-45fa562f45fa",
+			"name": "404: Удаление пользователя по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/users/2845",
+			"time": 35,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "137073cb-65a3-4fd9-923c-e4f149046c00",
+			"name": "200: Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Ответ содержит фразу об успешном добавлении": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит фразу об успешном добавлении": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Ответ содержит фразу об успешном добавлении": true
+				}
+			]
+		},
+		{
+			"id": "ea04d9f6-2d29-4af5-b232-acd3beb8aeb1",
+			"name": "200: Добавление товара в корзину пользователя",
+			"url": "https://qa.demoshopping.ru/cart",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				48
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "25a5312b-9495-4beb-bc9b-7a897a8b6105",
+			"name": "200: Возвращение содержимого корзины пользователя",
+			"url": "https://qa.demoshopping.ru/getcart",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				37
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d1c1bb2f-32d7-46d0-8057-32b14713030c",
+			"name": "200: Обновление количества товара в корзине пользователя",
+			"url": "https://qa.demoshopping.ru/cart/17744",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				61
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "eb381b34-4154-4eda-80b9-fd08d8bcd33c",
+			"name": "500: Обновление количества товара в корзине с ошибкой в теле запроса",
+			"url": "https://qa.demoshopping.ru/cart/17744",
+			"time": 45,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				45
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cc55fe99-7b3c-4192-87d4-db63392c3968",
+			"name": "404: Обновление количества товара в корзине c неправильным идентификатором элемента",
+			"url": "https://qa.demoshopping.ru/cart/21248",
+			"time": 33,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				33
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "62001aeb-ec48-431c-b289-04f554b7ca11",
+			"name": "401: Обновление количества товара в корзине у неавторизованного пользователя",
+			"url": "https://qa.demoshopping.ru/cart/17744",
+			"time": 30,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				30
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "52c5df3b-f44c-46c0-adcd-052102697849",
+			"name": "401: Возвращение содержимого корзины пользователя без авторизации",
+			"url": "https://qa.demoshopping.ru/getcart",
+			"time": 29,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				29
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5941606f-d17b-4c63-a9f3-1a2a5203583c",
+			"name": "401: Добавление товара в корзину пользователя без авторизации",
+			"url": "https://qa.demoshopping.ru/cart",
+			"time": 35,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f8e9717e-dbdb-4f07-8fef-5dc50d6fbf49",
+			"name": "500: Добавление несуществующего товара в корзину пользователя",
+			"url": "https://qa.demoshopping.ru/cart",
+			"time": 41,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				41
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ba77c899-30d3-4e3a-bac2-db72da79def9",
+			"name": "200: Удаление товара из корзины пользователя",
+			"url": "https://qa.demoshopping.ru/cart/17744",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				61
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4dff81de-0843-4ccc-8fbe-64db237343e0",
+			"name": "404: Удаление товара из корзины с невалидным id элемента корзины",
+			"url": "https://qa.demoshopping.ru/cart/999999999999999999999999999999999",
+			"time": 43,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				43
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3169fe63-e1fb-4706-a93f-a0059c928731",
+			"name": "401: Удаление товара из корзины неавторизованного пользователя",
+			"url": "https://qa.demoshopping.ru/cart/17520",
+			"time": 29,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				29
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "48f03d23-c917-45f5-8a3e-bdde005a8d91",
+			"name": "404: Получение списка всех заказов у пользователя с 0 заказов",
+			"url": "https://qa.demoshopping.ru/user-orders",
+			"time": 36,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				36
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4fdc8e87-28ac-4e64-ae34-2be19f5186ad",
+			"name": "401: Получение списка всех заказов у неавторизованного пользователя",
+			"url": "https://qa.demoshopping.ru/user-orders",
+			"time": 33,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				33
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1eb6b1e9-149f-41e1-80d0-478516543135",
+			"name": "200: Добавление товара в корзину пользователя",
+			"url": "https://qa.demoshopping.ru/cart",
+			"time": 65,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				65
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3453362b-2d14-45e5-a9a9-857c169c40b3",
+			"name": "201: Создание заказа из товаров в корзине",
+			"url": "https://qa.demoshopping.ru/orders",
+			"time": 68,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				68
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "249d5f3f-6586-4fd6-bdb2-c6a736fc2637",
+			"name": "200: Получение списка всех заказов у пользователя",
+			"url": "https://qa.demoshopping.ru/user-orders",
+			"time": 40,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				40
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "60ca27f7-7100-4612-ab16-07a9164a885c",
+			"name": "200: Обновление общей суммы заказов пользователя",
+			"url": "https://qa.demoshopping.ru/update-orders-total",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				50
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f3f434cc-ff3a-4776-8dcb-28d5363c34d6",
+			"name": "400: Создание заказа из товаров с пустой корзиной",
+			"url": "https://qa.demoshopping.ru/orders",
+			"time": 34,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				34
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "858c05ba-e7ea-4042-b9cc-3c0278b43d2e",
+			"name": "200: Изменение количества товара в заказе",
+			"url": "https://qa.demoshopping.ru/orders/5594/products/21248",
+			"time": 120,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				120
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "79c81642-8a8c-4d90-bd83-bc533206a952",
+			"name": "200: Удаление товара из заказа",
+			"url": "https://qa.demoshopping.ru/orders/5594/products/21248",
+			"time": 74,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				74
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a9ee2d79-f6b0-4126-bb31-cf95ada9917b",
+			"name": "404: Удаление товара из несуществующего заказа",
+			"url": "https://qa.demoshopping.ru/orders/5594/products/21248",
+			"time": 39,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				39
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2c788c18-2d75-43cc-8afd-beec1619b097",
+			"name": "404: Изменение количества товара в удаленном заказе",
+			"url": "https://qa.demoshopping.ru/orders/5594/products/21248",
+			"time": 35,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c116ac8d-872f-406b-90a5-cd629c0fc36b",
+			"name": "200: Получение данных об оплаченных заказах",
+			"url": "https://qa.demoshopping.ru/api/orders-history",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				64
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a175ca1d-f2c3-4bfc-8e2d-540155b5f372",
+			"name": "200: Обновление балансов карт и PayPal",
+			"url": "https://qa.demoshopping.ru/updatebalances",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				47
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3c352012-1ed7-4c81-82d4-fb32d10e70e6",
+			"name": "200: Добавление товара в корзину пользователя",
+			"url": "https://qa.demoshopping.ru/cart",
+			"time": 58,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				58
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5311382c-dd93-419a-b890-28f321416ae9",
+			"name": "200: Создание заказа из товаров в корзине",
+			"url": "https://qa.demoshopping.ru/orders",
+			"time": 89,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				89
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0e10d604-d28b-4762-9136-0b0d8c7aaa01",
+			"name": "200: Оплата заказов пользователя",
+			"url": "https://qa.demoshopping.ru/pay",
+			"time": 113,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				113
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b2315c9d-94fb-4959-a5fe-3f774dbb5d9c",
+			"name": "404: Оплата заказов пользователя, если заказа нет",
+			"url": "https://qa.demoshopping.ru/pay",
+			"time": 35,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bd247c29-611c-47c5-ab3c-f0981926248d",
+			"name": "200: Сброс базы данных",
+			"url": "https://qa.demoshopping.ru/api/reset-database",
+			"time": 81,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				81
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3051,
+	"collection": {
+		"requests": [
+			{
+				"id": "91e5116b-70ac-4b69-a07d-88f6a9a53de1",
+				"method": "GET"
+			},
+			{
+				"id": "0d717f80-073a-4ee1-8627-91e66385a421",
+				"method": "POST"
+			},
+			{
+				"id": "5a111bd2-8859-4ba2-8e65-dae742fabcb8",
+				"method": "PUT"
+			},
+			{
+				"id": "4819fa6d-a78b-412a-9955-dcd23e390566",
+				"method": "PUT"
+			},
+			{
+				"id": "79237623-0702-4e20-bd17-b46a4b11bacb",
+				"method": "PATCH"
+			},
+			{
+				"id": "c9afc07a-b557-43e7-a802-d35f24121e70",
+				"method": "PATCH"
+			},
+			{
+				"id": "1b5bb01c-834f-4100-acb8-ca76d92799a8",
+				"method": "POST"
+			},
+			{
+				"id": "df8c878b-4ac5-476b-b748-95df6ae58d93",
+				"method": "GET"
+			},
+			{
+				"id": "beb48aff-018b-4b36-b78e-554539dad51d",
+				"method": "DELETE"
+			},
+			{
+				"id": "e54eb707-1156-419d-b7ae-9a1969bfbd87",
+				"method": "PUT"
+			},
+			{
+				"id": "489e6843-1156-4d84-bea1-4b321d2f6f17",
+				"method": "DELETE"
+			},
+			{
+				"id": "ccded6cf-86b7-4081-b5c8-9dbe10860aa1",
+				"method": "DELETE"
+			},
+			{
+				"id": "11b21427-f26d-42a5-b368-9da0d76924de",
+				"method": "GET"
+			},
+			{
+				"id": "6dd72601-fbc6-4cf5-a36b-49d295a06f62",
+				"method": "PUT"
+			},
+			{
+				"id": "0484bd36-000d-4d4b-b81b-e9aa4b542ff0",
+				"method": "PATCH"
+			},
+			{
+				"id": "1c8da26c-d106-4271-8a64-11b3af7029bf",
+				"method": "GET"
+			},
+			{
+				"id": "1451aac2-fc59-4576-89a4-f91f20aa0a43",
+				"method": "GET"
+			},
+			{
+				"id": "093de585-1fd7-4d28-b6ed-549fcb30f190",
+				"method": "GET"
+			},
+			{
+				"id": "61163ce5-2deb-4086-9dc4-1409a71f2d89",
+				"method": "GET"
+			},
+			{
+				"id": "fdfa8b89-963f-4afc-91e8-69a143df0048",
+				"method": "GET"
+			},
+			{
+				"id": "6f4b7af5-1883-41cd-8f3d-f263a720aa79",
+				"method": "GET"
+			},
+			{
+				"id": "4c767042-c022-4839-b30e-0bad2a23a077",
+				"method": "POST"
+			},
+			{
+				"id": "09ce1329-0575-444a-bf68-39bea7ec3be6",
+				"method": "POST"
+			},
+			{
+				"id": "f9d306fe-913d-495a-b4cb-ab5cf917caf2",
+				"method": "POST"
+			},
+			{
+				"id": "0be7db16-dd4f-4d22-9377-d28b5e214d4c",
+				"method": "POST"
+			},
+			{
+				"id": "9e5234a9-414d-49cc-8b39-ac80cb5ac999",
+				"method": "POST"
+			},
+			{
+				"id": "c1b12336-0233-4156-b95a-37b832b1b555",
+				"method": "POST"
+			},
+			{
+				"id": "7b14f10b-fa41-4aa1-a446-1ae0d0db70a2",
+				"method": "POST"
+			},
+			{
+				"id": "99ec5a3d-6a13-4d82-80c8-4234a5e5d31e",
+				"method": "GET"
+			},
+			{
+				"id": "e0ed821a-a68f-4f97-bea9-1649b592adeb",
+				"method": "DELETE"
+			},
+			{
+				"id": "7c22a7e8-1bca-478b-8b30-45fa562f45fa",
+				"method": "DELETE"
+			},
+			{
+				"id": "137073cb-65a3-4fd9-923c-e4f149046c00",
+				"method": "POST"
+			},
+			{
+				"id": "ea04d9f6-2d29-4af5-b232-acd3beb8aeb1",
+				"method": "POST"
+			},
+			{
+				"id": "25a5312b-9495-4beb-bc9b-7a897a8b6105",
+				"method": "GET"
+			},
+			{
+				"id": "d1c1bb2f-32d7-46d0-8057-32b14713030c",
+				"method": "PATCH"
+			},
+			{
+				"id": "eb381b34-4154-4eda-80b9-fd08d8bcd33c",
+				"method": "PATCH"
+			},
+			{
+				"id": "cc55fe99-7b3c-4192-87d4-db63392c3968",
+				"method": "PATCH"
+			},
+			{
+				"id": "62001aeb-ec48-431c-b289-04f554b7ca11",
+				"method": "PATCH"
+			},
+			{
+				"id": "52c5df3b-f44c-46c0-adcd-052102697849",
+				"method": "GET"
+			},
+			{
+				"id": "5941606f-d17b-4c63-a9f3-1a2a5203583c",
+				"method": "POST"
+			},
+			{
+				"id": "f8e9717e-dbdb-4f07-8fef-5dc50d6fbf49",
+				"method": "POST"
+			},
+			{
+				"id": "ba77c899-30d3-4e3a-bac2-db72da79def9",
+				"method": "DELETE"
+			},
+			{
+				"id": "4dff81de-0843-4ccc-8fbe-64db237343e0",
+				"method": "DELETE"
+			},
+			{
+				"id": "3169fe63-e1fb-4706-a93f-a0059c928731",
+				"method": "DELETE"
+			},
+			{
+				"id": "48f03d23-c917-45f5-8a3e-bdde005a8d91",
+				"method": "GET"
+			},
+			{
+				"id": "4fdc8e87-28ac-4e64-ae34-2be19f5186ad",
+				"method": "GET"
+			},
+			{
+				"id": "1eb6b1e9-149f-41e1-80d0-478516543135",
+				"method": "POST"
+			},
+			{
+				"id": "3453362b-2d14-45e5-a9a9-857c169c40b3",
+				"method": "POST"
+			},
+			{
+				"id": "249d5f3f-6586-4fd6-bdb2-c6a736fc2637",
+				"method": "GET"
+			},
+			{
+				"id": "60ca27f7-7100-4612-ab16-07a9164a885c",
+				"method": "POST"
+			},
+			{
+				"id": "f3f434cc-ff3a-4776-8dcb-28d5363c34d6",
+				"method": "POST"
+			},
+			{
+				"id": "858c05ba-e7ea-4042-b9cc-3c0278b43d2e",
+				"method": "PATCH"
+			},
+			{
+				"id": "79c81642-8a8c-4d90-bd83-bc533206a952",
+				"method": "DELETE"
+			},
+			{
+				"id": "a9ee2d79-f6b0-4126-bb31-cf95ada9917b",
+				"method": "DELETE"
+			},
+			{
+				"id": "2c788c18-2d75-43cc-8afd-beec1619b097",
+				"method": "PATCH"
+			},
+			{
+				"id": "c116ac8d-872f-406b-90a5-cd629c0fc36b",
+				"method": "GET"
+			},
+			{
+				"id": "a175ca1d-f2c3-4bfc-8e2d-540155b5f372",
+				"method": "GET"
+			},
+			{
+				"id": "3c352012-1ed7-4c81-82d4-fb32d10e70e6",
+				"method": "POST"
+			},
+			{
+				"id": "5311382c-dd93-419a-b890-28f321416ae9",
+				"method": "POST"
+			},
+			{
+				"id": "0e10d604-d28b-4762-9136-0b0d8c7aaa01",
+				"method": "POST"
+			},
+			{
+				"id": "b2315c9d-94fb-4959-a5fe-3f774dbb5d9c",
+				"method": "POST"
+			},
+			{
+				"id": "bd247c29-611c-47c5-ab3c-f0981926248d",
+				"method": "DELETE"
+			}
+		]
+	}
+}
